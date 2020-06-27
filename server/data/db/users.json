@@ -1,0 +1,16 @@
+[
+  {
+    "username": "admin",
+    "firstname": "Doctor",
+    "lastname": "Who",
+    "password": "57c564dcc329ff1f83ebb184dd880b43204074e3be373e2e089b5f52f8ef290e",
+    "birthday": "1963-11-23"
+  },
+  {
+    "username": "katsuo49",
+    "firstname": "Anthony",
+    "lastname": "Pena",
+    "password": "57c564dcc329ff1f83ebb184dd880b43204074e3be373e2e089b5f52f8ef290e",
+    "birthday": "1993-02-28"
+  }
+]
