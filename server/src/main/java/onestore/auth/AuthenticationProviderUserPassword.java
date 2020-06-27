@@ -32,6 +32,7 @@ public class AuthenticationProviderUserPassword implements AuthenticationProvide
             AuthenticationRequest<?, ?> authenticationRequest) {
         var identity = authenticationRequest.getIdentity();
         var password = authenticationRequest.getSecret();
+        System.out.println(identity + " try to login");
         if (identity != null && password != null) {
             var optionalUserInfoForThisIdentity = this.userInfosService.getUserInfo(identity.toString());
             if (optionalUserInfoForThisIdentity.isPresent()) {
