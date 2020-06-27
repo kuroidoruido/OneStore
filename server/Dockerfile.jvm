@@ -1,4 +1,10 @@
+FROM gradle:jdk14 AS build
+COPY . /home/app/onestore
+WORKDIR /home/app/onestore
+RUN gradle assemble --no-daemon
+
+
 FROM openjdk:14-alpine
-COPY build/libs/server-*-all.jar server.jar
+COPY --from=build /home/app/onestore/build/libs/server-*-all.jar server.jar
 EXPOSE 8080
 CMD ["java", "-Dcom.sun.management.jmxremote", "-Xmx128m", "-jar", "server.jar"]
