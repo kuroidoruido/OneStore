@@ -19,6 +19,8 @@ OneStore is a response to very big centralized services. But it's not the only o
 
 ## In future
 
+- environment variables to changes salts
+- install guide
 - Update one data
 - Delete user from API (with all user data)
 - Refresh token to keep user connected
@@ -30,6 +32,6 @@ OneStore is a response to very big centralized services. But it's not the only o
 # FAQ
 ##  What is the default admin password?
 
-The default admin user is "admin" and its password is "admin".
+The default admin user is "admin" and its password is "admin". But API user must send password hashed with sha256. So in database we will have double hashed passwords to ensure passwords are not easily computable.
 
 The password is saved in database hash in sha3-256 with a salt. The salt can be configured if you need, but you will need to generate a new password hash for the default user manually.
